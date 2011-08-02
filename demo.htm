@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+</head>
+<body>
+  <div id="albums"></div>
+  <script type="text/javascript">
+    $.get('tmp/photos.xml', function(data) {
+      $(data).find('entry summary').each(function(index, item) {
+        $('#albums').append($(item).text()).append(' ');
+      });
+    });
+  </script>
+</body>
+</html>
