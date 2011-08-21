@@ -8,8 +8,10 @@
   <div id="albums"></div>
   <script type="text/javascript">
     $.get('tmp/photos.xml', function(data) {
-      $(data).find('entry summary').each(function(index, item) {
-        $('#albums').append($(item).text()).append(' ');
+      $(data).find('entry ').each(function(index, item) {
+	var title = '<h3>' + $(item).children('title').text() + '</h3>';
+        var summary = $(item).children('summary').text();
+        $('#albums').append(title).append(summary).append(' ');
       });
     });
   </script>
