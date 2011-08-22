@@ -5,15 +5,23 @@
   <script type="text/javascript" src="jquery-1.6.2.min.js"></script>
 </head>
 <body>
-  <div id="albums"></div>
-  <script type="text/javascript">
-    $.get('tmp/photos.xml', function(data) {
-      $(data).find('entry ').each(function(index, item) {
-	var title = '<h3>' + $(item).children('title').text() + '</h3>';
-        var summary = $(item).children('summary').text();
-        $('#albums').append(title).append(summary).append(' ');
-      });
-    });
-  </script>
+  <div class="album" data-user-album="jason9974/nFBnt"></div>
+  <div class="album" data-user-album="jason9974/IrkPiC"></div>
+  <div class="album" data-user-album="jason9974/7202"></div>
+  <div class="album" data-user-album="jason9974/952010"></div>
+  <div class="album" data-user-album="jason9974/QwkBzJ"></div>
+  <div class="album" data-user-album="jason9974/11"></div>
+  <div class="album" data-user-album="jason9974/HzwqWH"></div>
+  <div class="album" data-user-album="jason9974/715201088"></div>
+  <div class="album" data-user-album="jason9974/qhQWtK"></div>
+  <div class="album" data-user-album="jason9974/tdZyaI"></div>
+  <div class="album" data-user-album="jason9974/146302"></div>
+  <div class="album" data-user-album="jason9974/2677"></div>
+  <div class="album" data-user-album="jason9974/gqpThC"></div>
+  <div class="album" data-user-album="jason9974/wImHdB"></div>
+  <script type="text/javascript" src="galleria/galleria-1.2.5.min.js"></script>
+  <script type="text/javascript" src="galleria/themes/classic/galleria.classic.min.js"></script>
+  <script type="text/javascript" src="galleria/plugins/picasa/galleria.picasa.js"></script>
+  <script type="text/javascript" src="lightpcs.js"></script>
 </body>
 </html>
